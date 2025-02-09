@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contact-form');
     const newsletterForm = document.getElementById('newsletter-form');
     const confirmationMessage = document.getElementById('confirmation-message');
+    const errorMessage = document.getElementById('error-message');
 
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -23,15 +24,18 @@ document.addEventListener('DOMContentLoaded', function () {
         })
             .then(response => response.json())
             .then(data => {
-                if (data.ok) {
+                if (data.result === 'success') {
                     confirmationMessage.style.display = 'block';
+                    errorMessage.style.display = 'none';
                     newsletterForm.reset();
                 } else {
-                    alert('Il y a eu une erreur lors de l\'inscription.');
+                    errorMessage.style.display = 'block';
+                    confirmationMessage.style.display = 'none';
                 }
             })
             .catch(error => {
-                alert('Il y a eu une erreur lors de l\'envoi du formulaire.');
+                errorMessage.style.display = 'block';
+                confirmationMessage.style.display = 'none';
             });
     });
 
