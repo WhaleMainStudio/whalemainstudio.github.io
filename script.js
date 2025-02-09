@@ -13,5 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         event.preventDefault();
         alert('Inscription à la newsletter réussie !');
         // Ajoute ici le code pour envoyer les données du formulaire
+
     });
 });
+
