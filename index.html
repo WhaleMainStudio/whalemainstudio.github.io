@@ -63,6 +63,39 @@
                 <input type="email" id="newsletter-email" name="email" placeholder="EMAIL" required>
                 <button type="submit">S'inscrire</button>
             </form>
+            <div id="confirmation-message" style="display: none;">Merci de vous être inscrit à notre newsletter !</div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const newsletterForm = document.getElementById('newsletter-form');
+                    const confirmationMessage = document.getElementById('confirmation-message');
+
+                    newsletterForm.addEventListener('submit', function (event) {
+                        event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+                        const formData = new FormData(newsletterForm);
+
+                        fetch(newsletterForm.action, {
+                            method: newsletterForm.method,
+                            body: formData,
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.ok) {
+                                    confirmationMessage.style.display = 'block';
+                                    newsletterForm.reset();
+                                } else {
+                                    alert('Il y a eu une erreur lors de l\'inscription.');
+                                }
+                            })
+                            .catch(error => {
+                                alert('Il y a eu une erreur lors de l\'envoi du formulaire.');
+                            });
+                    });
+                });
+            </script>
 
         </div>
     </section>
