@@ -1,1 +1,77 @@
-Hello World
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Studio de Jeux Vidéo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo.png" alt="Logo de l'entreprise">
+            </div>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#jeu">Notre Jeu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil">
+        <div class="container">
+            <h1>Bienvenue sur Mon Studio de Jeux Vidéo</h1>
+            <p>Nous créons des jeux passionnants et innovants pour tous les joueurs.</p>
+        </div>
+    </section>
+
+    <section id="jeu">
+        <div class="container">
+            <h2>Notre Jeu</h2>
+            <p>Découvrez notre dernier jeu avec des captures d'écran et des vidéos.</p>
+            <div class="screenshots">
+                <img src="screenshot1.png" alt="Capture d'écran 1">
+                <img src="screenshot2.png" alt="Capture d'écran 2">
+                <img src="screenshot3.png" alt="Capture d'écran 3">
+            </div>
+            <div class="videos">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Contactez-nous pour plus d'informations et inscrivez-vous à notre newsletter.</p>
+            <form id="contact-form">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+            <form id="newsletter-form">
+                <label for="newsletter-email">Inscrivez-vous à notre newsletter :</label>
+                <input type="email" id="newsletter-email" name="newsletter-email" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Mon Studio de Jeux Vidéo. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
