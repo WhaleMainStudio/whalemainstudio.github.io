@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+bublesNum = 0;
 
 // Création des bulles
 function createBubbles() {
@@ -56,30 +57,34 @@ function createBubbles() {
     bubblesContainer.className = 'bubbles-container';
     document.body.appendChild(bubblesContainer);
 
-    function createBubble() {
-        const bubble = document.createElement('div');
-        bubble.className = 'bubble';
+    function createBubble()
+    {
+        if (bublesNum < 50) {
+            bublesNum++;
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
 
-        // Position aléatoire en bas
-        const size = Math.random() * 30 + 10;
-        const left = Math.random() * 100;
-        const delay = Math.random() * 5;
+            // Position aléatoire en bas
+            const size = Math.random() * 30 + 10;
+            const left = Math.random() * 100;
+            const delay = Math.random() * 5;
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+            bubble.style.left = `${left}%`;
+            bubble.style.animationDelay = `${delay}s`;
 
-        bubble.style.width = `${size}px`;
-        bubble.style.height = `${size}px`;
-        bubble.style.left = `${left}%`;
-        bubble.style.animationDelay = `${delay}s`;
+            // Suppression après l'animation
+            bubble.addEventListener('animationend', () => {
+                bubble.remove();
+                bubblesNum--;
+            });
 
-        // Suppression après l'animation
-        bubble.addEventListener('animationend', () => {
-            bubble.remove();
-        });
-
-        bubblesContainer.appendChild(bubble);
+            bubblesContainer.appendChild(bubble);
+        }
+       
     }
-
     // Créer des bulles toutes les 500ms
-    setInterval(createBubble, 500);
+    setInterval(createBubble, Math.random(1, 50));
 }
 
 // Démarrer l'animation au chargement
