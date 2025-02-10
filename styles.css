@@ -245,7 +245,10 @@ footer {
         color: #999;
     }
 .Omada-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    max-width: 100px;
     display: block;
-    max-width: 250px;
     margin: 0 auto 1rem;
 }
