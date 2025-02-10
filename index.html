@@ -20,32 +20,46 @@
         </nav>
     </header>
 
+
+
     <section id="accueil">
         <div class="container">
             <h1>WhaleMain Studio</h1>
             <p>Développeurs indépendants</p>
-            <img src="frenchflag.jpg" alt="Drapeau français" class="french-flag">
 
-            <!--<div class="equipe">
-    <h2>Notre Équipe</h2>
-    <div class="scroll-container members-container">
-        <div class="member">
-            <img src="member1.png" alt="Membre 1">
-            <p>Lucas Blanc</p>
-        </div>
-        <div class="member">
-            <img src="member2.png" alt="Membre 2">
-            <p>Nathan Fauvel</p>
-        </div>
-        <div class="member">
-            <img src="member3.png" alt="Membre 3">
-            <p>Nom du Membre 3</p>
-        </div>-->
-            <!-- Ajoutez plus de membres ici -->
-            <!--</div>-->
-        </div>
+            <div class="equipe">
+                <h2>Notre Équipe</h2>
+                <div class="scroll-container members-container">
+                    <div class="member">
+                        <img src="member1.png" alt="Membre 1">
+                        <p>Lucas Blanc</p>
+                    </div>
+                    <div class="member">
+                        <img src="member2.png" alt="Membre 2">
+                        <p>Nathan Fauvel</p>
+                    </div>
+                    <!-- Ajoutez d'autres membres ici -->
+                </div>
+            </div>
         </div>
     </section>
+
+
+
+
+
+    <div class="newsletter-container">
+        <form id="newsletter-form" action="https://script.google.com/macros/s/AKfycbxnegSm5a1qXtbK9tphq69oHxCg_WlQEmn_vgCKJSs-l8rmV-p9zk66pUyQQ7SrLbwJ/exec" method="POST">
+            <label for="newsletter-email">Demander une clef beta pour Omada :</label>
+            <input type="email" id="newsletter-email" name="email" placeholder="Entrez votre email" required>
+            <input type="text" id="name-message" name="name" placeholder="Entrez votre nom" required>
+            <button type="submit">S'inscrire</button>
+        </form>
+        <div id="confirmation-message" style="display: none;">Votre inscription à notre newsletter est validée !</div>
+        <div id="error-message" style="display: none;">Il y a eu une erreur lors de l'inscription.</div>
+    </div>
+
+
 
     <section id="jeu">
         <div class="container">
@@ -64,16 +78,8 @@
     </section>
 
 
-    <div class="newsletter-container">
-        <form id="newsletter-form" action="https://script.google.com/macros/s/AKfycbxnegSm5a1qXtbK9tphq69oHxCg_WlQEmn_vgCKJSs-l8rmV-p9zk66pUyQQ7SrLbwJ/exec" method="POST">
-            <label for="newsletter-email">Demander une clef Steam pour Omada :</label>
-            <input type="email" id="newsletter-email" name="email" placeholder="Entrez votre email" required>
-            <input type="text" id="name-message" name="name" placeholder="Entrez votre nom" required>
-            <button type="submit">S'inscrire</button>
-        </form>
-        <div id="confirmation-message" style="display: none;">Votre inscription à notre newsletter est validée !</div>
-        <div id="error-message" style="display: none;">Il y a eu une erreur lors de l'inscription.</div>
-    </div>
+
+
 
     <section id="contact">
         <div class="container">

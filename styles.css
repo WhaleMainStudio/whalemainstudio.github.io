@@ -1,23 +1,39 @@
 ﻿/* Styles Généraux */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a;
-    color: #e0e0e0;
+    background: linear-gradient(180deg, #87CEEB, #00008B);
+    background-size: 100% 400%; /* Augmenté pour l'effet de scroll */
+    background-position: center 0%;
+    color: #333;
+    transition: background-position 0.3s ease-out;
 }
 
 header, footer {
-    background-color: #1f1f1f;
+    background-color: rgba(0, 0, 139, 0.9); /* Bleu foncé semi-transparent */
     padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
 }
+
+    header::before {
+        background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.3), transparent 50%);
+        background-size: 100px 100px;
+        opacity: 0.7;
+    }
+
+
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    position: relative;
+    z-index: 1;
 }
 
     nav .logo img {
@@ -38,98 +54,105 @@ nav {
         }
 
             nav ul li a:hover {
-                color: #ff4655;
+                color: rgba(255, 255, 255, 0.5); /* Orange pour les liens au survol */
             }
 
 section {
-    padding: 6rem 2rem;
+    padding: 4rem 2rem;
     text-align: center;
 }
 
 .container {
-    background-color: #333;
+    background-color: rgba(255, 255, 255, 0.5); /* bloc */
     padding: 2rem;
     border-radius: 8px;
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 1rem auto; /* Augmenter la marge pour voir le fond */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 #accueil {
-    background: url('background.jpg') no-repeat center/cover;
-    color: #fff;
-    padding: 10rem 2rem;
+    color: #333;
+    padding: 8rem 2rem;
 }
 
     #accueil h1 {
         font-size: 3rem;
         margin-bottom: 1rem;
+        color: #ff7f50; /* Orange pour les titres */
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color: black;
     }
 
     #accueil p {
         font-size: 1.5rem;
+        color: rgba(0, 0, 139, 0.9);
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: black;
     }
-/* Newsletter */
+
 .newsletter-container {
-    margin: 20px auto;
+    margin: 1px auto;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: rgba(255, 255, 255, 0.5); /* bloc */
     border-radius: 8px;
     max-width: 600px;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
     .newsletter-container form {
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 1rem; /* Harmonisation avec le formulaire de jeu */
     }
 
     .newsletter-container label {
         font-weight: bold;
         font-size: 1.1rem;
-        color: #000; /* Noir */
+        color: #333;
     }
 
     .newsletter-container input,
     .newsletter-container button {
-        padding: 10px;
+        padding: 0.7rem; /* Harmonisation avec le formulaire de jeu */
         border: 1px solid #ccc;
         border-radius: 4px;
         font-size: 1rem;
+        background-color: #ffffff;
+        color: #333;
     }
 
     .newsletter-container button {
-        background-color: #007BFF;
-        color: white;
-        border: none;
+        background-color: rgba(255, 255, 255, 0.5); /* Harmonisation avec le formulaire de jeu */
         cursor: pointer;
         transition: background-color 0.3s;
     }
 
         .newsletter-container button:hover {
-            background-color: #0056b3;
+            background-color: #ff4500; /* Orange plus foncé au survol */
         }
 
 #jeu {
-    background-color: #2a2a2a;
+    background-color: rgba(255, 255, 255, 0); /* background */
     padding: 4rem 2rem;
 }
 
     #jeu h2 {
         font-size: 2.5rem;
+        color: #ffffff;
     }
 
     #jeu p {
         font-size: 1.2rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     #jeu .screenshots {
         display: flex;
         justify-content: center;
         gap: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
         #jeu .screenshots img {
@@ -152,39 +175,40 @@ section {
         }
 
 #contact {
-    background-color: #1f1f1f;
+    background-color: rgba(255, 255, 255, 0); /* background */
     padding: 4rem 2rem;
+    color: #333;
 }
 
     #contact form {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     #contact input, #contact textarea, #contact button {
         padding: 0.7rem;
-        border: 1px solid #444;
+        border: 1px solid #ccc;
         border-radius: 4px;
-        background-color: #333;
-        color: #e0e0e0;
+        background-color: #ffffff;
+        color: #333;
         font-size: 1rem;
     }
 
     #contact button {
-        background-color: #ff4655;
+        background-color: rgba(255, 255, 255, 0.5);
         cursor: pointer;
         transition: background-color 0.3s;
     }
 
         #contact button:hover {
-            background-color: #e04251;
+            background-color: #ff4500;
         }
 
 footer p {
     font-size: 1rem;
-    color: #999;
+    color: #e0e0e0;
 }
 
 .Omada-logo {
@@ -193,13 +217,6 @@ footer p {
     object-fit: contain;
     display: block;
     margin: 0 auto 1rem;
-}
-
-.french-flag {
-    display: block;
-    width: 75px;
-    max-width: 75px;
-    margin: 10px auto;
 }
 
 #error-message {
@@ -214,3 +231,76 @@ footer p {
     padding: 1rem;
 }
 
+.equipe {
+    margin-top: 2rem;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+
+.member {
+    flex: 0 0 auto;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+    .member img {
+        max-width: 100%;
+        border-radius: 50%;
+    }
+
+    .member p {
+        margin: 0;
+        font-size: 1rem;
+        color: #333;
+    }
+
+
+/* Ajoutez ces styles à la fin de votre CSS */
+
+.bubbles-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bubble {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: float 8s infinite ease-in;
+    opacity: 0;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh) scale(0.2);
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+    }
+}
