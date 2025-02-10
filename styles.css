@@ -50,10 +50,15 @@ section {
 }
 
 .container {
+    background-color: #333;
+    padding: 2rem;
+    border-radius: 8px;
+    color: #e0e0e0;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
+    margin: 2rem auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 
 #accueil {
     background: url('background.jpg') no-repeat center center/cover;
@@ -184,6 +189,12 @@ section {
         #jeu .videos iframe {
             border-radius: 8px;
         }
+
+    .Omada-logo {
+        display: block;
+        max-width: 250px;
+        margin: 0 auto 1rem;
+    }
 
 #contact {
     background-color: #1f1f1f;
