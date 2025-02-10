@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
         alert('Formulaire de contact soumis avec succès !');
-        // Ajoute ici le code pour envoyer les données du formulaire
     });
 
     newsletterForm.addEventListener('submit', function (event) {

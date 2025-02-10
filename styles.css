@@ -200,3 +200,18 @@ footer {
         font-size: 1rem;
         color: #999;
     }
+.members-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Ajustez cette valeur selon l'espacement souhaité entre les membres */
+}
+
+.member {
+    text-align: center;
+}
+
+    .member img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%; /* Pour des images rondes, vous pouvez ajuster cette valeur */
+    }
