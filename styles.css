@@ -1,4 +1,5 @@
-﻿body {
+﻿/* General Styles */
+body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
@@ -102,6 +103,45 @@ section {
             margin: 0;
         }
 
+.newsletter-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    max-width: 600px;
+    text-align: center;
+}
+
+    .newsletter-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-container label {
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .newsletter-container input, .newsletter-container button {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+
+    .newsletter-container button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .newsletter-container button:hover {
+            background-color: #0056b3;
+        }
+
 #jeu {
     background-color: #2a2a2a;
     padding: 4rem 2rem;
@@ -153,11 +193,6 @@ section {
         margin-bottom: 1rem;
     }
 
-    #contact p {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-    }
-
     #contact form {
         display: flex;
         flex-direction: column;
@@ -199,19 +234,4 @@ footer {
     footer p {
         font-size: 1rem;
         color: #999;
-    }
-.members-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Ajustez cette valeur selon l'espacement souhaité entre les membres */
-}
-
-.member {
-    text-align: center;
-}
-
-    .member img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 50%; /* Pour des images rondes, vous pouvez ajuster cette valeur */
     }
