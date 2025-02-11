@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -11,28 +10,38 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="#top"><img src="WMS Logo.png" alt="WhaleMainStudio Logo"></a>
+                <a href="#top"><img src="Images/WMS Logo.png" alt="WhaleMainStudio Logo"></a>
+            </div>
+            <div class="language-selector">
+
+                <select id="language-select">
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="ko">한국어</option>
+                    <option value="ja">日本語</option>
+                    <option value="zh">中文</option>
+                </select>
+                <img id="flag-image" alt="Flag" class="flag">
             </div>
             <ul>
-                <li><a href="#jeu">Omada</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#jeu" data-section="game">Omada</a></li>
+                <li><a href="#contact" data-section="contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-
-
     <section id="accueil">
         <div class="container">
-            <h1>WhaleMain Studio</h1>
+            <h1 data-section="welcome-title">WhaleMain Studio</h1>
             <div class="equipe">
                 <div class="scroll-container members-container">
                     <div class="member">
-                        <p1>Lead Dev</p1>
+                        <p1 data-section="team-lead">Lead Dev</p1>
                         <p>Lucas Blanc</p>
                     </div>
                     <div class="member">
-                        <p1>Dev</p1>
+                        <p1 data-section="team-dev">Dev</p1>
                         <p>Nathan Fauvel</p>
                     </div>
                 </div>
@@ -40,28 +49,22 @@
         </div>
     </section>
 
-
-
-
-
     <div class="newsletter-container">
         <form id="newsletter-form" action="https://script.google.com/macros/s/AKfycbxnegSm5a1qXtbK9tphq69oHxCg_WlQEmn_vgCKJSs-l8rmV-p9zk66pUyQQ7SrLbwJ/exec" method="POST">
-            <label for="newsletter-email">Demander une clef beta pour Omada :</label>
+            <label for="newsletter-email" data-section="newsletter-label">Demander une clef beta pour Omada :</label>
             <input type="email" id="newsletter-email" name="email" placeholder="Entrez votre email" required>
             <input type="text" id="name-message" name="name" placeholder="Entrez votre nom" required>
-            <button type="submit">S'inscrire</button>
+            <button type="submit" data-section="newsletter-button">S'inscrire</button>
         </form>
-        <div id="confirmation-message" style="display: none;">Votre inscription à notre newsletter est validée !</div>
-        <div id="error-message" style="display: none;">Il y a eu une erreur lors de l'inscription.</div>
+        <div id="confirmation-message" style="display: none;" data-section="confirmation-message">Votre inscription à notre newsletter est validée !</div>
+        <div id="error-message" style="display: none;" data-section="error-message">Il y a eu une erreur lors de l'inscription.</div>
     </div>
-
-
 
     <section id="jeu">
         <div class="container">
             <img src="BlackFluid.png" alt="Omada-Logo" class="Omada-logo">
-            <h2>Omada</h2>
-            <p>La synergie vous apportera la victoire.</p>
+            <h2 data-section="game-title">Omada</h2>
+            <p data-section="game-description">La synergie vous apportera la victoire.</p>
             <div class="screenshots">
                 <img src="screenshot1.png" alt="Capture d'écran 1">
                 <img src="screenshot2.png" alt="Capture d'écran 2">
@@ -73,31 +76,27 @@
         </div>
     </section>
 
-
-
-
-
     <section id="contact">
         <div class="container">
-            <h2>Contact</h2>
+            <h2 data-section="contact-title">Contact</h2>
             <form id="contact-form">
-                <label for="name">Nom :</label>
+                <label for="name" data-section="contact-name-label">Nom :</label>
                 <input type="text" id="name" name="name" required>
 
-                <label for="email">Email :</label>
+                <label for="email" data-section="contact-email-label">Email :</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="message">Message :</label>
+                <label for="message" data-section="contact-message-label">Message :</label>
                 <textarea id="message" name="message" required></textarea>
 
-                <button type="submit">Envoyer</button>
+                <button type="submit" data-section="contact-button">Envoyer</button>
             </form>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 WhaleMain Studio. Tous droits réservés.</p>
+            <p data-section="footer">&copy; 2025 WhaleMain Studio. Tous droits réservés.</p>
         </div>
     </footer>
 
