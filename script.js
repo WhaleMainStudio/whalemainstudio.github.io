@@ -48,13 +48,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Vérifie si la page a déjà été rechargée pendant cette session
-if (!sessionStorage.getItem('reloaded')) {
-    // Marque que le rechargement a été effectué pour cette session
-    sessionStorage.setItem('reloaded', 'true');
-    // Recharge la page depuis le serveur
-    window.location.reload(true);
+// Fonction pour recharger le fichier CSS
+function reloadCSS() {
+    // Sélectionne la balise <link> de ton CSS
+    const link = document.querySelector('link[rel="stylesheet"][href*="LINESeedSans_XBd"]');
+    
+    if (link) {
+        // Crée un nouvel élément <link>
+        const newLink = link.cloneNode(true);
+        
+        // Ajoute un paramètre unique (timestamp) à l'URL pour forcer le rechargement du fichier CSS
+        newLink.href = link.href.split('?')[0] + '?v=' + new Date().getTime(); // ou utilise un identifiant unique à chaque fois
+
+        // Remplace l'ancien <link> par le nouveau
+        link.parentNode.replaceChild(newLink, link);
+    }
 }
+
+// Exécute la fonction pour forcer le rechargement du CSS
+reloadCSS();
 
 
 bublesNum = 0;
