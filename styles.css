@@ -327,7 +327,7 @@ footer p {
 
     .member p1 {
         margin: 0;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         color: darkorange;
         position: absolute;
         top: 20px;
@@ -339,6 +339,9 @@ footer p {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        display: inline-block;
+        width: 100%;
+        max-width: 100%;
     }
 
 
