@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        alert('Formulaire de contact soumis avec succès !');
+        alert('Formulaire de contact soumis avec succï¿½s !');
     });
 
     newsletterForm.addEventListener('submit', function (event) {
@@ -47,6 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
 
 bublesNum = 0;
 
