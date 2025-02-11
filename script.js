@@ -48,15 +48,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-if (!localStorage.getItem('reloaded')) {
-    // Marque que le rechargement a été effectué
-    localStorage.setItem('reloaded', 'true');
+// Vérifie si la page a déjà été rechargée pendant cette session
+if (!sessionStorage.getItem('reloaded')) {
+    // Marque que le rechargement a été effectué pour cette session
+    sessionStorage.setItem('reloaded', 'true');
     // Recharge la page depuis le serveur
     window.location.reload(true);
-} else {
-    // Réinitialise le flag pour que ça ne se reproduise plus
-    localStorage.removeItem('reloaded');
 }
+
 
 bublesNum = 0;
 
