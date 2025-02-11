@@ -48,24 +48,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Fonction pour recharger le fichier CSS
+
+if (!sessionStorage.getItem('reloaded')) {
+
+    sessionStorage.setItem('reloaded', 'true');
+
+    window.location.reload(true);
+}
+
+
 function reloadCSS() {
-    // Sélectionne la balise <link> de ton CSS
+
     const link = document.querySelector('link[rel="stylesheet"][href*="LINESeedSans_XBd"]');
     
     if (link) {
-        // Crée un nouvel élément <link>
         const newLink = link.cloneNode(true);
-        
-        // Ajoute un paramètre unique (timestamp) à l'URL pour forcer le rechargement du fichier CSS
-        newLink.href = link.href.split('?')[0] + '?v=' + new Date().getTime(); // ou utilise un identifiant unique à chaque fois
-
-        // Remplace l'ancien <link> par le nouveau
+        newLink.href = link.href.split('?')[0] + '?v=' + new Date().getTime();
         link.parentNode.replaceChild(newLink, link);
     }
 }
 
-// Exécute la fonction pour forcer le rechargement du CSS
 reloadCSS();
 
 
