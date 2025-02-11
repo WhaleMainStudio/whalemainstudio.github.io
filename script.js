@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'contact-name-placeholder': 'Entrez votre nom',
             'contact-email-placeholder': 'Entrez votre email',
             'contact-message-placeholder': 'Entrez votre message',
-            'flag': 'Images/Flags/frenchFlag.jpg'
+            'flag': 'Images/Flags/frenchFlag.png'
         },
         'en': {
             'welcome-title': 'WhaleMain Studio',
