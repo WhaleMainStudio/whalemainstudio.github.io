@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'contact-email-placeholder': 'Entrez votre email',
             'contact-message-placeholder': 'Entrez votre message',
             'flag': 'Images/Flags/frenchFlag.png'
-        },
+        }, 
         'en': {
             'welcome-title': 'WhaleMain Studio',
             'team-lead': 'Lead Dev',
