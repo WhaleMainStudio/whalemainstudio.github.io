@@ -410,12 +410,17 @@ footer p {
 }
 
 @media (max-width: 480px) {
+    header nav ul li a {
+        font-size: 1rem; /* Réduction de la taille de la police des liens */
+        -webkit-text-stroke-width: 0.5px; /* Réduire le contour du texte */
+    }
+
     #accueil h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Réduire la taille du titre d'accueil */
     }
 
     #jeu h2, #jeu p {
-        font-size: 1.25rem;
+        font-size: 1.25rem; /* Réduire la taille des titres et paragraphes */
     }
 
     .scroll-container {
