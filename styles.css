@@ -72,7 +72,7 @@ nav {
         }
 
             nav ul li a:hover {
-                color: #ff7f50;
+                color: darkorange;
             }
 
 section {
@@ -97,7 +97,7 @@ section {
     #accueil h1 {
         font-size: 3rem;
         margin-bottom: 1rem;
-        color: #ff7f50;
+        color: darkorange;
         -webkit-text-stroke-width: 3px;
         -webkit-text-stroke-color: black;
     }
@@ -301,16 +301,8 @@ footer p {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+    position: relative;
 }
-
-    .member img {
-        max-width: 100%;
-        border-radius: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
 
     .member p {
         margin: 0;
@@ -320,6 +312,23 @@ footer p {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .member p1 {
+        margin: 0;
+        font-size: 1.2rem;
+        color: darkorange;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: bold;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 1.1px;
     }
 
 .bubbles-container {
@@ -411,16 +420,16 @@ footer p {
 
 @media (max-width: 480px) {
     header nav ul li a {
-        font-size: 1rem; /* Réduction de la taille de la police des liens */
-        -webkit-text-stroke-width: 0.5px; /* Réduire le contour du texte */
+        font-size: 1rem;
+        -webkit-text-stroke-width: 0.5px;
     }
 
     #accueil h1 {
-        font-size: 1.5rem; /* Réduire la taille du titre d'accueil */
+        font-size: 1.5rem;
     }
 
     #jeu h2, #jeu p {
-        font-size: 1.25rem; /* Réduire la taille des titres et paragraphes */
+        font-size: 1.25rem;
     }
 
     .scroll-container {
