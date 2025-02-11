@@ -409,11 +409,7 @@ footer p {
     }
 }
 
-@media (max-width: 768px) {
-    header nav ul li a {
-        font-size: 1.2rem !important;
-    }
-}
+@media (max-width: 480px) {
     #accueil h1 {
         font-size: 1.5rem;
     }
