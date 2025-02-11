@@ -1,5 +1,12 @@
-﻿body {
-    font-family: 'Arial', sans-serif;
+﻿@font-face {
+    font-family: 'LINESeedSans_XBd';
+    src: url('OTF/LINESeedSans_XBd.otf') format('opentype'), url('LINESeedSans_XBd.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'LINESeedSans_XBd';
     margin: 0;
     padding: 0;
     background: linear-gradient(180deg, #87CEEB, #00008B);
@@ -320,7 +327,7 @@ footer p {
 
     .member p1 {
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         color: darkorange;
         position: absolute;
         top: 20px;
@@ -329,7 +336,11 @@ footer p {
         font-weight: bold;
         -webkit-text-stroke-color: black;
         -webkit-text-stroke-width: 1.1px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
+
 
 .bubbles-container {
     position: fixed;
