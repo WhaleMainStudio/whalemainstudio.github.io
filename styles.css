@@ -7,6 +7,7 @@
     background-position: center 0%;
     color: #333;
     transition: background-position 0.3s ease-out;
+    padding-top: 80px;
 }
 
 header, footer {
@@ -23,6 +24,7 @@ header, footer {
         background-size: 100px 100px;
         opacity: 0.7;
     }
+
 header {
     position: fixed;
     top: 0;
@@ -33,6 +35,7 @@ header {
 body {
     padding-top: 80px;
 }
+
 section {
     padding: 4rem 2rem;
     margin: 2rem 0;
@@ -105,8 +108,6 @@ section {
         -webkit-text-stroke-width: 1.5px;
         -webkit-text-stroke-color: black;
     }
-
-
 
 .newsletter-container {
     margin: 1rem auto;
@@ -321,7 +322,6 @@ footer p {
         justify-content: center;
     }
 
-
 .bubbles-container {
     position: fixed;
     top: 0;
@@ -354,5 +354,81 @@ footer p {
     100% {
         transform: translateY(-100vh) scale(1);
         opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    #accueil h1 {
+        font-size: 2rem;
+    }
+
+    #jeu h2, #jeu p, #jeu .screenshots img {
+        font-size: 1.5rem;
+    }
+
+    #jeu .screenshots img {
+        max-width: 100%;
+    }
+
+    .newsletter-container form,
+    #contact form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .newsletter-container input,
+    .newsletter-container button,
+    #contact input,
+    #contact button,
+    #contact textarea {
+        font-size: 1rem;
+    }
+
+    .scroll-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .member {
+        width: 100%;
+        max-width: 200px;
+        margin: 10px 0;
+    }
+
+    .Omada-logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #accueil h1 {
+        font-size: 1.5rem;
+    }
+
+    #jeu h2, #jeu p {
+        font-size: 1.25rem;
+    }
+
+    .scroll-container {
+        flex-direction: column;
+    }
+
+    .member {
+        width: 90%;
+        max-width: 150px;
+    }
+
+    .Omada-logo {
+        width: 100px;
+        height: 100px;
     }
 }
