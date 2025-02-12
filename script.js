@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contact-form');
-    const newsletterForm = document.getElementById('newsletter-form');
+    const omadaKeyDemandForm = document.getElementById('omadaKeyDemand-form');
     const confirmationMessage = document.getElementById('confirmation-message');
     const errorMessage = document.getElementById('error-message');
 
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        alert('Formulaire de contact soumis avec succ�s !');
+        alert('Formulaire de contact soumis avec succès !');
     });
 
-    newsletterForm.addEventListener('submit', function (event) {
+    omadaKeyDemandForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        const formData = new FormData(newsletterForm);
+        const formData = new FormData(omadaKeyDemandForm);
 
-        fetch(newsletterForm.action, {
-            method: newsletterForm.method,
+        fetch(omadaKeyDemandForm.action, {
+            method: omadaKeyDemandForm.method,
             body: formData,
             headers: {
                 'Accept': 'application/json'
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (data.result === 'success') {
                     confirmationMessage.style.display = 'block';
                     errorMessage.style.display = 'none';
-                    newsletterForm.reset();
+                    omadaKeyDemandForm.reset();
                 } else {
                     errorMessage.style.display = 'block';
                     confirmationMessage.style.display = 'none';
@@ -46,84 +46,17 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
-});
 
-
-if (!sessionStorage.getItem('reloaded')) {
-
-    sessionStorage.setItem('reloaded', 'true');
-
-    window.location.reload(true);
-}
-
-
-function reloadCSS() {
-
-    const link = document.querySelector('link[rel="stylesheet"][href*="LINESeedSans_XBd"]');
-    
-    if (link) {
-        const newLink = link.cloneNode(true);
-        newLink.href = link.href.split('?')[0] + '?v=' + new Date().getTime();
-        link.parentNode.replaceChild(newLink, link);
-    }
-}
-
-reloadCSS();
-
-
-bublesNum = 0;
-
-function createBubbles() {
-    const bubblesContainer = document.createElement('div');
-    bubblesContainer.className = 'bubbles-container';
-    document.body.appendChild(bubblesContainer);
-
-    function createBubble()
-    {
-        if (bublesNum < 50) {
-            bublesNum++;
-            const bubble = document.createElement('div');
-            bubble.className = 'bubble';
-            const size = Math.random() * 30 + 10;
-            const left = Math.random() * 100;
-            const delay = Math.random() * 5;
-            bubble.style.width = `${size}px`;
-            bubble.style.height = `${size}px`;
-            bubble.style.left = `${left}%`;
-            bubble.style.animationDelay = `${delay}s`;
-
-            bubble.addEventListener('animationend', () => {
-                bubble.remove();
-                bubblesNum--;
-            });
-
-            bubblesContainer.appendChild(bubble);
-        }
-       
-    }
-    setInterval(createBubble, Math.random(1, 50));
-}
-
-window.addEventListener('load', createBubbles);
-
-window.addEventListener('scroll', () => {
-    const scrollPercentage = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-    document.body.style.backgroundPosition = `center ${scrollPercentage * 100}%`;
-});
-
-
-document.addEventListener('DOMContentLoaded', function () {
     const languageSelect = document.getElementById('language-select');
     const flagImage = document.getElementById('flag-image');
     const translations = {
         'fr': {
             'welcome-title': 'WhaleMain Studio',
-            'team-lead': 'Lead Dev',
-            'team-dev': 'Dev',
-            
-            'newsletter-label': 'Demander une clef beta pour Omada :',
-            'newsletter-button': "S'inscrire",
-            'confirmation-message': 'Votre inscription à notre newsletter est validée !',
+            'team-lead': 'Développeur Principal',
+            'team-dev': 'Développeur',
+            'omadaKeyDemand-label': 'Demander une clef beta pour Omada :',
+            'omadaKeyDemand-button': "S'inscrire",
+            'confirmation-message': 'Votre demande de clef est enregistrée.',
             'error-message': 'Il y a eu une erreur lors de l\'inscription.',
             'game-title': 'Omada',
             'game-description': 'La synergie vous apportera la victoire.',
@@ -135,21 +68,20 @@ document.addEventListener('DOMContentLoaded', function () {
             'footer': '© 2025 WhaleMain Studio. Tous droits réservés.',
             'game': 'Omada',
             'contact': 'Contact',
-            'newsletter-email-placeholder': 'Entrez votre email',
-            'newsletter-name-placeholder': 'Entrez votre nom',
+            'omadaKeyDemand-email-placeholder': 'Entrez votre email',
+            'omadaKeyDemand-name-placeholder': 'Entrez votre nom',
             'contact-name-placeholder': 'Entrez votre nom',
             'contact-email-placeholder': 'Entrez votre email',
             'contact-message-placeholder': 'Entrez votre message',
             'flag': 'Images/Flags/frenchFlag.png'
-        }, 
+        },
         'en': {
             'welcome-title': 'WhaleMain Studio',
-            'team-lead': 'Lead Dev',
-            'team-dev': 'Dev',
-            
-            'newsletter-label': 'Request a beta key for Omada:',
-            'newsletter-button': 'Subscribe',
-            'confirmation-message': 'Your newsletter subscription is confirmed!',
+            'team-lead': 'Lead Developer',
+            'team-dev': 'Developer',
+            'omadaKeyDemand-label': 'Request a beta key for Omada:',
+            'omadaKeyDemand-button': 'Subscribe',
+            'confirmation-message': 'Your key request is registered.',
             'error-message': 'There was an error during registration.',
             'game-title': 'Omada',
             'game-description': 'Synergy will bring you victory.',
@@ -161,8 +93,8 @@ document.addEventListener('DOMContentLoaded', function () {
             'footer': '© 2025 WhaleMain Studio. All rights reserved.',
             'game': 'Omada',
             'contact': 'Contact',
-            'newsletter-email-placeholder': 'Enter your email',
-            'newsletter-name-placeholder': 'Enter your name',
+            'omadaKeyDemand-email-placeholder': 'Enter your email',
+            'omadaKeyDemand-name-placeholder': 'Enter your name',
             'contact-name-placeholder': 'Enter your name',
             'contact-email-placeholder': 'Enter your email',
             'contact-message-placeholder': 'Enter your message',
@@ -172,10 +104,9 @@ document.addEventListener('DOMContentLoaded', function () {
             'welcome-title': 'WhaleMain Studio',
             'team-lead': 'Desarrollador Principal',
             'team-dev': 'Desarrollador',
-            
-            'newsletter-label': 'Solicitar una clave beta para Omada:',
-            'newsletter-button': 'Suscribirse',
-            'confirmation-message': '¡Tu suscripción al boletín ha sido confirmada!',
+            'omadaKeyDemand-label': 'Solicitar una clave beta para Omada:',
+            'omadaKeyDemand-button': 'Suscribirse',
+            'confirmation-message': '¡Tu solicitud de clave está registrada!',
             'error-message': 'Hubo un error durante el registro.',
             'game-title': 'Omada',
             'game-description': 'La sinergia te llevará a la victoria.',
@@ -187,8 +118,8 @@ document.addEventListener('DOMContentLoaded', function () {
             'footer': '© 2025 WhaleMain Studio. Todos los derechos reservados.',
             'game': 'Omada',
             'contact': 'Contacto',
-            'newsletter-email-placeholder': 'Introduce tu correo electrónico',
-            'newsletter-name-placeholder': 'Introduce tu nombre',
+            'omadaKeyDemand-email-placeholder': 'Introduce tu correo electrónico',
+            'omadaKeyDemand-name-placeholder': 'Introduce tu nombre',
             'contact-name-placeholder': 'Introduce tu nombre',
             'contact-email-placeholder': 'Introduce tu correo electrónico',
             'contact-message-placeholder': 'Introduce tu mensaje',
@@ -198,10 +129,9 @@ document.addEventListener('DOMContentLoaded', function () {
             'welcome-title': 'WhaleMain Studio',
             'team-lead': '리드 개발자',
             'team-dev': '개발자',
-            
-            'newsletter-label': '오마다 베타 키 요청:',
-            'newsletter-button': '구독하기',
-            'confirmation-message': '뉴스레터 구독이 확인되었습니다!',
+            'omadaKeyDemand-label': '오마다 베타 키 요청:',
+            'omadaKeyDemand-button': '구독하기',
+            'confirmation-message': '베타 키 요청이 등록되었습니다.',
             'error-message': '등록 중 오류가 발생했습니다.',
             'game-title': '오마다',
             'game-description': '시너지가 승리를 가져다 줄 것입니다.',
@@ -211,10 +141,10 @@ document.addEventListener('DOMContentLoaded', function () {
             'contact-message-label': '메시지:',
             'contact-button': '보내기',
             'footer': '© 2025 WhaleMain Studio. 모든 권리 보유.',
-            'game': 'Omada',
+            'game': '오마다',
             'contact': '연락처',
-            'newsletter-email-placeholder': '이메일을 입력하세요',
-            'newsletter-name-placeholder': '이름을 입력하세요',
+            'omadaKeyDemand-email-placeholder': '이메일을 입력하세요',
+            'omadaKeyDemand-name-placeholder': '이름을 입력하세요',
             'contact-name-placeholder': '이름을 입력하세요',
             'contact-email-placeholder': '이메일을 입력하세요',
             'contact-message-placeholder': '메시지를 입력하세요',
@@ -224,10 +154,9 @@ document.addEventListener('DOMContentLoaded', function () {
             'welcome-title': 'WhaleMain Studio',
             'team-lead': 'リード開発者',
             'team-dev': '開発者',
-            
-            'newsletter-label': 'Omadaのベータキーをリクエスト:',
-            'newsletter-button': '購読する',
-            'confirmation-message': 'ニュースレターの購読が確認されました！',
+            'omadaKeyDemand-label': 'Omadaのベータキーをリクエスト:',
+            'omadaKeyDemand-button': '購読する',
+            'confirmation-message': 'ベータキーのリクエストが登録されました。',
             'error-message': '登録中にエラーが発生しました。',
             'game-title': 'Omada',
             'game-description': 'シナジーが勝利をもたらします。',
@@ -239,8 +168,8 @@ document.addEventListener('DOMContentLoaded', function () {
             'footer': '© 2025 WhaleMain Studio. 全著作権所有。',
             'game': 'Omada',
             'contact': '連絡先',
-            'newsletter-email-placeholder': 'メールアドレスを入力してください',
-            'newsletter-name-placeholder': '名前を入力してください',
+            'omadaKeyDemand-email-placeholder': 'メールアドレスを入力してください',
+            'omadaKeyDemand-name-placeholder': '名前を入力してください',
             'contact-name-placeholder': '名前を入力してください',
             'contact-email-placeholder': 'メールアドレスを入力してください',
             'contact-message-placeholder': 'メッセージを入力してください',
@@ -250,10 +179,9 @@ document.addEventListener('DOMContentLoaded', function () {
             'welcome-title': 'WhaleMain Studio',
             'team-lead': '首席开发者',
             'team-dev': '开发者',
-            
-            'newsletter-label': '请求Omada的测试版密钥:',
-            'newsletter-button': '订阅',
-            'confirmation-message': '您的订阅已确认！',
+            'omadaKeyDemand-label': '请求Omada的测试版密钥:',
+            'omadaKeyDemand-button': '订阅',
+            'confirmation-message': '您的密钥请求已注册。',
             'error-message': '注册过程中出现错误。',
             'game-title': 'Omada',
             'game-description': '协同作战将带来胜利。',
@@ -265,12 +193,37 @@ document.addEventListener('DOMContentLoaded', function () {
             'footer': '© 2025 WhaleMain Studio. 版权所有。',
             'game': 'Omada',
             'contact': '联系方式',
-            'newsletter-email-placeholder': '输入您的电子邮件',
-            'newsletter-name-placeholder': '输入您的姓名',
+            'omadaKeyDemand-email-placeholder': '输入您的电子邮件',
+            'omadaKeyDemand-name-placeholder': '输入您的姓名',
             'contact-name-placeholder': '输入您的姓名',
             'contact-email-placeholder': '输入您的电子邮件',
             'contact-message-placeholder': '输入您的消息',
             'flag': 'Images/Flags/chinaFlag.png'
+        },
+        'ru': {
+            'welcome-title': 'WhaleMain Studio',
+            'team-lead': 'Главный разработчик',
+            'team-dev': 'Разработчик',
+            'omadaKeyDemand-label': 'Запросить бета-ключ для Omada:',
+            'omadaKeyDemand-button': 'Подписаться',
+            'confirmation-message': 'Ваш запрос на ключ зарегистрирован.',
+            'error-message': 'Произошла ошибка при регистрации.',
+            'game-title': 'Omada',
+            'game-description': 'Синергия приведет вас к победе.',
+            'contact-title': 'Контакт',
+            'contact-name-label': 'Имя:',
+            'contact-email-label': 'Электронная почта:',
+            'contact-message-label': 'Сообщение:',
+            'contact-button': 'Отправить',
+            'footer': '© 2025 WhaleMain Studio. Все права защищены.',
+            'game': 'Omada',
+            'contact': 'Контакт',
+            'omadaKeyDemand-email-placeholder': 'Введите ваш адрес электронной почты',
+            'omadaKeyDemand-name-placeholder': 'Введите ваше имя',
+            'contact-name-placeholder': 'Введите ваше имя',
+            'contact-email-placeholder': 'Введите ваш адрес электронной почты',
+            'contact-message-placeholder': 'Введите ваше сообщение',
+            'flag': 'Images/Flags/russiaFlag.png'
         }
     };
 
@@ -281,7 +234,8 @@ document.addEventListener('DOMContentLoaded', function () {
         'es': 'es',
         'ko': 'ko',
         'ja': 'ja',
-        'zh': 'zh'
+        'zh': 'zh',
+        'ru': 'ru'
     };
 
     const defaultLang = languageMap[userLang.split('-')[0]] || 'fr';
@@ -300,8 +254,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }
         });
-        document.getElementById('newsletter-email').placeholder = translation['newsletter-email-placeholder'];
-        document.getElementById('name-message').placeholder = translation['newsletter-name-placeholder'];
+        document.getElementById('omadaKeyDemand-email').placeholder = translation['omadaKeyDemand-email-placeholder'];
+        document.getElementById('name-message').placeholder = translation['omadaKeyDemand-name-placeholder'];
         document.getElementById('name').placeholder = translation['contact-name-placeholder'];
         document.getElementById('email').placeholder = translation['contact-email-placeholder'];
         document.getElementById('message').placeholder = translation['contact-message-placeholder'];
@@ -316,6 +270,57 @@ document.addEventListener('DOMContentLoaded', function () {
 
     translatePage(defaultLang);
 
-    // Existing code...
-});
+    if (!sessionStorage.getItem('reloaded')) {
+        sessionStorage.setItem('reloaded', 'true');
+        window.location.reload(true);
+    }
 
+    function reloadCSS() {
+        const link = document.querySelector('link[rel="stylesheet"][href*="LINESeedSans_XBd"]');
+        if (link) {
+            const newLink = link.cloneNode(true);
+            newLink.href = link.href.split('?')[0] + '?v=' + new Date().getTime();
+            link.parentNode.replaceChild(newLink, link);
+        }
+    }
+
+    reloadCSS();
+
+    let bublesNum = 0;
+
+    function createBubbles() {
+        const bubblesContainer = document.createElement('div');
+        bubblesContainer.className = 'bubbles-container';
+        document.body.appendChild(bubblesContainer);
+
+        function createBubble() {
+            if (bublesNum < 50) {
+                bublesNum++;
+                const bubble = document.createElement('div');
+                bubble.className = 'bubble';
+                const size = Math.random() * 30 + 10;
+                const left = Math.random() * 100;
+                const delay = Math.random() * 5;
+                bubble.style.width = `${size}px`;
+                bubble.style.height = `${size}px`;
+                bubble.style.left = `${left}%`;
+                bubble.style.animationDelay = `${delay}s`;
+
+                bubble.addEventListener('animationend', () => {
+                    bubble.remove();
+                    bublesNum--;
+                });
+
+                bubblesContainer.appendChild(bubble);
+            }
+        }
+        setInterval(createBubble, Math.random() * 50 + 1);
+    }
+
+    window.addEventListener('load', createBubbles);
+
+    window.addEventListener('scroll', () => {
+        const scrollPercentage = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+        document.body.style.backgroundPosition = `center ${scrollPercentage * 100}%`;
+    });
+});
