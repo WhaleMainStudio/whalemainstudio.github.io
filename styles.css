@@ -24,9 +24,16 @@ header, footer {
     overflow: hidden;
 }
 
+header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
     display: flex;
@@ -34,6 +41,7 @@ header {
     align-items: center;
     padding: 0 1rem;
     box-sizing: border-box;
+    margin: 0;
 }
 
 nav {
@@ -42,6 +50,7 @@ nav {
     align-items: center;
     width: 100%;
     padding: 0;
+    margin: 0;
     position: relative;
     z-index: 1;
     flex-wrap: wrap;
@@ -78,18 +87,19 @@ nav ul {
     margin-left: auto;
 }
 
-    nav ul li a {
-        color: #ffffff;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s;
-        font-size: 1.5rem;
-        -webkit-text-stroke-width: 1.5px;
-        -webkit-text-stroke-color: black;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 1.5rem;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; /* Ensure text does not overflow */
+}
 
         nav ul li a:hover {
             color: darkorange;
@@ -429,6 +439,8 @@ footer {
 
     nav h1 {
         font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
     }
 
 
