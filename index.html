@@ -27,6 +27,7 @@
                     <img id="flag-image" src="Flag" alt="Flag" class="flag">
                 </div>
             </div>
+            <h1 data-section="welcome-title">WhaleMain Studio</h1>
             <ul>
                 <li><a href="#jeu" data-section="game">Omada</a></li>
                 <li><a href="#contact" data-section="contact">Contact</a></li>
@@ -34,18 +35,14 @@
         </nav>
     </header>
 
-    <section id="accueil">
-        <div class="container">
-            <h1 data-section="welcome-title">WhaleMain Studio</h1>
-        </div>
-    </section>
-
     <section id="jeu">
         <div class="container">
             <div class="game-presentation">
                 <img src="Images/BlackFluid.png" alt="Omada-Logo" class="Omada-logo">
-                <h2 data-section="game-title">Omada</h2>
-                <p data-section="game-description">La synergie vous apportera la victoire.</p>
+                <div class="game-info">
+                    <h2 data-section="game-title">Omada</h2>
+                    <p data-section="game-description">La synergie vous apportera la victoire.</p>
+                </div>
                 <div class="screenshots">
                     <img src="screenshot1.png" alt="Capture d'écran 1">
                     <img src="screenshot2.png" alt="Capture d'écran 2">
@@ -60,7 +57,7 @@
                     <label for="omadaKeyDemand-email" data-section="omadaKeyDemand-label">Demander une clef beta pour Omada :</label>
                     <input type="email" id="omadaKeyDemand-email" name="email" placeholder="Entrez votre email" required>
                     <input type="text" id="name-message" name="name" placeholder="Entrez votre nom" required>
-                    <button type="submit" data-section="omadaKeyDemand-button">S'inscrire</button>
+                    <button type="submit" data-section="omadaKeyDemand-button">S'inscrire sur la liste d'attente</button>
                 </form>
                 <div id="confirmation-message" style="display: none;" data-section="confirmation-message">Votre demande de clef est enregistrée.</div>
                 <div id="error-message" style="display: none;" data-section="error-message">Il y a eu une erreur lors de l'inscription.</div>
@@ -90,10 +87,16 @@
         <div class="container">
             <div class="scroll-container members-container">
                 <div class="member">
+                    <a href="https://www.linkedin.com/in/lucas-blanc-79474a193/" target="_blank" class="linkedin-button">
+                        <img src="Images/linkedIn.png" alt="">
+                    </a>
                     <p1 data-section="team-lead">Développeur Principal</p1>
                     <p>Lucas Blanc</p>
                 </div>
                 <div class="member">
+                    <a href="https://www.linkedin.com/in/nathan-fauvel-2bb67a275/" target="_blank" class="linkedin-button">
+                        <img src="Images/linkedIn.png" alt="">
+                    </a>
                     <p1 data-section="team-dev">Développeur</p1>
                     <p>Nathan Fauvel</p>
                 </div>

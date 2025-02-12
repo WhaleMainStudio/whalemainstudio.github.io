@@ -7,8 +7,6 @@
 
 body {
     font-family: 'LINESeedSans_XBd';
-    margin: 0;
-    padding: 0;
     background: linear-gradient(180deg, #87CEEB, #00008B);
     background-size: 100% 400%;
     background-position: center 0%;
@@ -31,25 +29,22 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-}
-
-body {
-    padding-top: 80px;
-}
-
-section {
-    padding: 2rem 1rem;
-    margin: 1rem 0;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    width: 100%;
+    padding: 0;
     position: relative;
     z-index: 1;
+    flex-wrap: wrap;
 }
 
 .logo-language-container {
@@ -65,6 +60,17 @@ nav .logo img {
     height: 100px;
 }
 
+nav h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: darkorange;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    white-space: nowrap;
+    flex-grow: 1;
+    text-align: center;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -72,23 +78,22 @@ nav ul {
     margin-left: auto;
 }
 
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-    font-size: 1.5rem;
-    color: #ffffff;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: black;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
+    nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+        font-size: 1.5rem;
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: black;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
-nav ul li a:hover {
-    color: darkorange;
-}
+        nav ul li a:hover {
+            color: darkorange;
+        }
 
 .language-selector {
     display: flex;
@@ -96,29 +101,29 @@ nav ul li a:hover {
     gap: 0.5rem;
 }
 
-.language-selector .flag {
-    max-width: 32px;
-    max-height: 32px;
-    width: auto;
-    height: auto;
-}
+    .language-selector .flag {
+        max-width: 32px;
+        max-height: 32px;
+        width: auto;
+        height: auto;
+    }
 
-.language-selector select {
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #ffffff;
-    color: #333;
-    font-size: 1rem;
-    font-family: 'LINESeedSans_XBd';
-}
+    .language-selector select {
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #ffffff;
+        color: #333;
+        font-size: 1rem;
+        font-family: 'LINESeedSans_XBd';
+    }
 
 .container {
     background-color: rgba(0, 0, 0, 0.25);
     padding: 2rem;
     border-radius: 8px;
-    max-width: 1200px;
-    margin: 1rem auto;
+    max-width: 85%;
+    margin: 4rem auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
@@ -126,63 +131,25 @@ nav ul li a:hover {
     gap: 1rem;
 }
 
-#accueil {
-    color: #333;
-    padding: 4rem 2rem;
-}
-
-#accueil h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: darkorange;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black;
-}
-
-#accueil p {
-    font-size: 1.5rem;
-    color: rgba(0, 0, 139, 0.9);
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: black;
-}
-
-.game-presentation, .omadaKeyDemand-container {
-    width: 100%;
-    text-align: center;
-}
-
-.omadaKeyDemand-container form {
+#jeu .game-presentation {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
 }
 
-.omadaKeyDemand-container label {
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: #333;
-    font-family: 'LINESeedSans_XBd';
+
+.Omada-logo {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 0.5rem;
 }
 
-.omadaKeyDemand-container input,
-.omadaKeyDemand-container button {
-    padding: 0.7rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    background-color: #ffffff;
-    color: #333;
-    font-family: 'LINESeedSans_XBd';
-}
-
-.omadaKeyDemand-container button {
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.omadaKeyDemand-container button:hover {
-    background-color: #4cff00;
+#jeu .game-info {
+    text-align: center;
+    margin-bottom: 0.5rem;
 }
 
 #jeu h2 {
@@ -191,10 +158,10 @@ nav ul li a:hover {
     -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
     font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 #jeu p {
-    margin-bottom: 1rem;
     font-size: 1.25rem;
     color: white;
     -webkit-text-stroke-color: black;
@@ -202,59 +169,71 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
-#jeu .screenshots {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    font-size: 0.75rem;
-    color: white;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 0.5px;
-    font-weight: bold;
-}
-
-#jeu .screenshots img {
-    max-width: 300px;
+.omadaKeyDemand-container {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 2rem;
     border-radius: 8px;
-    transition: transform 0.3s;
+    width: 100%;
+    margin: 2rem 0;
 }
 
-#jeu .screenshots img:hover {
-    transform: scale(1.1);
-}
+    .omadaKeyDemand-container label {
+        display: block;
+        text-align: center;
+        color: white;
+        -webkit-text-stroke: 1px black;
+        margin-bottom: 0.5rem;
+    }
 
-#jeu .videos {
-    display: flex;
-    justify-content: center;
-}
+    .omadaKeyDemand-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 500px;
+        margin: 0 auto;
+    }
 
-#jeu .videos iframe {
-    border-radius: 8px;
-}
-
-#contact {
-    background-color: rgba(255, 255, 255, 0);
-    padding: 2rem 2rem;
+#contact form label {
+    display: block;
+    text-align: center;
     color: white;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 1.25px;
-    font-weight: bold;
+    -webkit-text-stroke: 1px black;
+    margin-bottom: 0.5rem;
 }
 
 #contact form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    color: white;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 1px;
-    font-size: 1.25rem;
-    font-weight: bold;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-#contact input, #contact textarea, #contact button {
+#contact h2 {
+    color: white !important;
+    -webkit-text-stroke: 1px black;
+    margin-bottom: 1.5rem;
+}
+
+#contact-form button,
+#omadaKeyDemand-form button {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+    padding: 0.8rem 2rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: auto;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+input, textarea, button {
     padding: 0.7rem;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -262,17 +241,18 @@ nav ul li a:hover {
     font-size: 1rem;
     color: #333;
     font-family: 'LINESeedSans_XBd';
+    width: 100%;
 }
 
-#contact button {
+button {
     background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-#contact button:hover {
-    background-color: #4cff00;
-}
+    button:hover {
+        background-color: #4cff00;
+    }
 
 footer {
     background-color: transparent;
@@ -283,18 +263,10 @@ footer {
     overflow: hidden;
 }
 
-footer p {
-    font-size: 1rem;
-    color: #e0e0e0;
-}
-
-.Omada-logo {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto 1rem;
-}
+    footer p {
+        font-size: 1rem;
+        color: #e0e0e0;
+    }
 
 #error-message {
     color: red;
@@ -317,6 +289,10 @@ footer p {
     font-weight: bold;
 }
 
+#equipe {
+    margin-bottom: 2rem;
+}
+
 .scroll-container {
     display: flex;
     overflow-x: auto;
@@ -327,9 +303,10 @@ footer p {
 
 .member {
     flex: 0 0 auto;
-    width: 200px;
-    height: 200px;
+    width: 225px;
+    height: 225px;
     background-color: #fff;
+    backdrop-filter: blur(5px);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -340,32 +317,63 @@ footer p {
     position: relative;
     padding: 1rem;
     box-sizing: border-box;
+    background: linear-gradient(145deg, rgba(135,206,235,0.8), rgba(0,0,139,0.6));
+    border: 2px solid rgba(255,255,255,0.4);
+    color: white;
+    -webkit-text-stroke: 0.8px black;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.members-container {
+    justify-content: center;
+    gap: 2rem;
 }
 
 .member p {
-    margin: 0;
-    font-size: 1rem;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    word-wrap: break-word;
+    width: 100%;
+    padding: 0 1rem;
+    color: #e0e0e0;
+    -webkit-text-stroke: 0.3px black;
 }
 
-.member p1 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: rgb(0, 0, 0);
-    position: static;
-    font-weight: bold;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 1.1px;
-    white-space: normal;
-    text-align: center;
-    word-wrap: break-word;
+    .member p1 {
+        margin: 0;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: bold;
+        -webkit-text-stroke-color: black;
+        -webkit-text-stroke-width: 1.1px;
+        white-space: normal;
+        text-align: center;
+        word-wrap: break-word;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+    }
+
+.linkedin-button {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 24px;
+    height: 24px;
+    z-index: 1000;
+    transition: transform 0.2s ease;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+    color: #ffffff;
 }
+
+    .linkedin-button img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        color: #ffffff;
+        z-index: 1001;
+    }
 
 .bubbles-container {
     position: fixed;
@@ -403,98 +411,55 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    header nav ul li a {
-        font-size: 1.2rem;
+    .container {
+        width: 95%;
+        margin: 2rem auto;
     }
 
-    #accueil h1 {
-        font-size: 2rem;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-left: 0;
     }
 
-    #jeu h2, #jeu p, #jeu .screenshots img {
+    nav h1 {
         font-size: 1.5rem;
     }
 
-    #jeu .screenshots img {
-        max-width: 100%;
-    }
-
-    .omadaKeyDemand-container form,
-    #contact form {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .omadaKeyDemand-container input,
-    .omadaKeyDemand-container button,
-    #contact input,
-    #contact button,
-    #contact textarea {
-        font-size: 1rem;
-    }
-
-    .scroll-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .member {
-        width: 100%;
-        max-width: 200px;
-        margin: 10px 0;
-    }
 
     .Omada-logo {
-        width: 120px;
-        height: 120px;
-    }
-
-    footer p {
-        font-size: 0.9rem;
-    }
-
-    header nav .logo img {
-        max-width: 100px;
-    }
-
-    .language-selector select {
-        font-size: 0.9rem;
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto 0.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    header nav ul li a {
-        font-size: 1rem;
-        -webkit-text-stroke-width: 0.5px;
-    }
-
-    #accueil h1 {
-        font-size: 1.5rem;
-    }
-
-    #jeu h2, #jeu p {
-        font-size: 1.25rem;
-    }
-
-    .scroll-container {
-        flex-direction: column;
-    }
-
-    .member {
-        width: 90%;
-        max-width: 150px;
+    nav h1 {
+        font-size: 1.2rem;
     }
 
     .Omada-logo {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto 0.5rem;
     }
 
-    header nav .logo img {
-        max-width: 80px;
+    .member {
+        width: 150px;
+        height: 150px;
     }
-
-    .language-selector select {
-        font-size: 0.8rem;
-    }
+}
+.member-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
 }

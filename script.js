@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'team-lead': 'Développeur Principal',
             'team-dev': 'Développeur',
             'omadaKeyDemand-label': 'Demander une clef beta pour Omada :',
-            'omadaKeyDemand-button': "S'inscrire",
+            'omadaKeyDemand-button': "S'inscrire sur la liste d'attente",
             'confirmation-message': 'Votre demande de clef est enregistrée.',
             'error-message': 'Il y a eu une erreur lors de l\'inscription.',
             'game-title': 'Omada',
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'team-lead': 'Lead Developer',
             'team-dev': 'Developer',
             'omadaKeyDemand-label': 'Request a beta key for Omada:',
-            'omadaKeyDemand-button': 'Subscribe',
+            'omadaKeyDemand-button': 'Join waiting list',
             'confirmation-message': 'Your key request is registered.',
             'error-message': 'There was an error during registration.',
             'game-title': 'Omada',
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'team-lead': 'Desarrollador Principal',
             'team-dev': 'Desarrollador',
             'omadaKeyDemand-label': 'Solicitar una clave beta para Omada:',
-            'omadaKeyDemand-button': 'Suscribirse',
+            'omadaKeyDemand-button': 'Unirse a la lista de espera',
             'confirmation-message': '¡Tu solicitud de clave está registrada!',
             'error-message': 'Hubo un error durante el registro.',
             'game-title': 'Omada',
@@ -130,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'team-lead': '리드 개발자',
             'team-dev': '개발자',
             'omadaKeyDemand-label': '오마다 베타 키 요청:',
-            'omadaKeyDemand-button': '구독하기',
+            'omadaKeyDemand-button': '대기 목록에 등록',
             'confirmation-message': '베타 키 요청이 등록되었습니다.',
             'error-message': '등록 중 오류가 발생했습니다.',
             'game-title': '오마다',
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'team-lead': 'リード開発者',
             'team-dev': '開発者',
             'omadaKeyDemand-label': 'Omadaのベータキーをリクエスト:',
-            'omadaKeyDemand-button': '購読する',
+            'omadaKeyDemand-button': 'ウェイティングリストに登録',
             'confirmation-message': 'ベータキーのリクエストが登録されました。',
             'error-message': '登録中にエラーが発生しました。',
             'game-title': 'Omada',
@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'team-lead': '首席开发者',
             'team-dev': '开发者',
             'omadaKeyDemand-label': '请求Omada的测试版密钥:',
-            'omadaKeyDemand-button': '订阅',
+            'omadaKeyDemand-button': '加入等候名单',
             'confirmation-message': '您的密钥请求已注册。',
             'error-message': '注册过程中出现错误。',
             'game-title': 'Omada',
@@ -205,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'team-lead': 'Главный разработчик',
             'team-dev': 'Разработчик',
             'omadaKeyDemand-label': 'Запросить бета-ключ для Omada:',
-            'omadaKeyDemand-button': 'Подписаться',
+            'omadaKeyDemand-button': 'Присоединиться к листу ожидания',
             'confirmation-message': 'Ваш запрос на ключ зарегистрирован.',
             'error-message': 'Произошла ошибка при регистрации.',
             'game-title': 'Omada',
@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     reloadCSS();
 
-    let bublesNum = 0;
+    let bubblesNum = 0;
 
     function createBubbles() {
         const bubblesContainer = document.createElement('div');
@@ -294,8 +294,8 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.appendChild(bubblesContainer);
 
         function createBubble() {
-            if (bublesNum < 50) {
-                bublesNum++;
+            if (bubblesNum < 50) {
+                bubblesNum++;
                 const bubble = document.createElement('div');
                 bubble.className = 'bubble';
                 const size = Math.random() * 30 + 10;
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 bubble.addEventListener('animationend', () => {
                     bubble.remove();
-                    bublesNum--;
+                    bubblesNum--;
                 });
 
                 bubblesContainer.appendChild(bubble);
