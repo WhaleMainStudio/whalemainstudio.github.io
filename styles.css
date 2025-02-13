@@ -98,7 +98,7 @@ nav ul li a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 100%; /* Ensure text does not overflow */
+    max-width: 100%;
 }
 
         nav ul li a:hover {
@@ -451,6 +451,14 @@ footer {
         display: block;
         margin: 0 auto 0.5rem;
     }
+
+        nav ul li:nth-child(1), 
+        nav ul li:nth-child(2) {
+            display: none;
+        }
+    }
+
+
 }
 
 @media (max-width: 480px) {
