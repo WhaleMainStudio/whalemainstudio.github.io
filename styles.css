@@ -107,7 +107,7 @@ nav ul li a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-family: 'LTCrow-SemiBold';
+    font-family: 'LTCrow-SemiBold' !important;
 }
 
     .language-selector .flag {
@@ -124,7 +124,7 @@ nav ul li a {
         background-color: #ffffff;
         color: #333;
         font-size: 1rem;
-        font-family: 'LTCrow-SemiBold';
+        font-family: 'LTCrow-SemiBold' !important;
         caret-color: red;
         color: white;
         background: linear-gradient(145deg,rgba(255,50,0,0.8), rgba(255,125,0,0.8));
@@ -185,6 +185,7 @@ nav ul li a {
     border-radius: 8px;
     width: 100%;
     margin: 2rem 0;
+
 }
 
     .omadaKeyDemand-container label {
@@ -201,6 +202,7 @@ nav ul li a {
         gap: 1.5rem;
         max-width: 500px;
         margin: 0 auto;
+
     }
 
 #contact form label {
@@ -241,6 +243,7 @@ nav ul li a {
     margin: 0 auto;
     display: block;
     box-sizing: border-box;
+    font-family: 'LTCrow-SemiBold';
 }
 
 input, textarea, button {
@@ -250,7 +253,7 @@ input, textarea, button {
     background-color: #ffffff;
     font-size: 1rem;
     color: #333;
-    font-family: 'LINESeedSans_XBd';
+    font-family: 'LTCrow-SemiBold';
     width: 100%;
 }
 
@@ -461,6 +464,15 @@ footer {
         display: none;
     }
 
+    input, textarea, button {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    #contact form {
+        width: 100%;
+        box-sizing: border-box;
+    }
     }
 
 
@@ -488,6 +500,16 @@ footer {
     nav ul li:nth-child(2),
     nav h1 {
         display: none;
+    }
+    input, textarea, button {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    #contact form {
+        width: 100%;
+        box-sizing: border-box;
     }
 }
 .member-content {
