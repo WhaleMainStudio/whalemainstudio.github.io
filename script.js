@@ -6,6 +6,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
+        const test = new FormData(contactForm);
+        fetch(contactForm.action, {
+            method: contactForm.method,
+            body: test,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+
         alert('Formulaire de contact soumis avec succès !');
     });
 

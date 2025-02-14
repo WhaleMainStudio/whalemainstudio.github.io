@@ -16,7 +16,7 @@ body {
 }
 
 header, footer {
-    background-color: rgba(150, 150, 150, 0.75);
+    background-color: rgba(135,206,235,0.8);
     padding: 0.25rem 0;
     text-align: center;
     box-shadow: 0 2px 5px rgba(255, 255, 255, 0.5);
@@ -73,8 +73,7 @@ nav h1 {
     font-size: 2rem;
     margin: 0;
     color: darkorange;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+
     white-space: nowrap;
     flex-grow: 1;
     text-align: center;
@@ -93,8 +92,7 @@ nav ul li a {
     font-weight: bold;
     transition: color 0.3s;
     font-size: 1.5rem;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: black;
+
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -132,7 +130,7 @@ nav ul li a {
     background-color: rgba(0, 0, 0, 0.25);
     padding: 2rem;
     border-radius: 8px;
-    max-width: 85%;
+    max-width: 50%;
     margin: 4rem auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -165,8 +163,7 @@ nav ul li a {
 #jeu h2 {
     font-size: 2.5rem;
     color: white;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 1px;
+
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
@@ -174,8 +171,7 @@ nav ul li a {
 #jeu p {
     font-size: 1.25rem;
     color: white;
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 1px;
+
     font-weight: bold;
 }
 
@@ -191,7 +187,7 @@ nav ul li a {
         display: block;
         text-align: center;
         color: white;
-        -webkit-text-stroke: 1px black;
+
         margin-bottom: 0.5rem;
     }
 
@@ -207,7 +203,7 @@ nav ul li a {
     display: block;
     text-align: center;
     color: white;
-    -webkit-text-stroke: 1px black;
+
     margin-bottom: 0.5rem;
 }
 
@@ -222,7 +218,7 @@ nav ul li a {
 
 #contact h2 {
     color: white !important;
-    -webkit-text-stroke: 1px black;
+
     margin-bottom: 1.5rem;
 }
 
@@ -278,24 +274,28 @@ footer {
         color: #e0e0e0;
     }
 
-#error-message {
+#error-message,
+#confirmation-message {
     color: red;
     font-weight: bold;
     padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #confirmation-message {
     color: green;
-    font-weight: bold;
-    padding: 1rem;
 }
 
 .equipe {
     margin-top: 1rem;
     font-size: 1.25rem;
     color: rgb(0, 0, 0);
-    -webkit-text-stroke-color: black;
-    -webkit-text-stroke-width: 2px;
+
     font-weight: bold;
 }
 
@@ -330,7 +330,7 @@ footer {
     background: linear-gradient(145deg, rgba(135,206,235,0.8), rgba(0,0,139,0.6));
     border: 2px solid rgba(255,255,255,0.4);
     color: white;
-    -webkit-text-stroke: 0.8px black;
+
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
@@ -344,7 +344,7 @@ footer {
     width: 100%;
     padding: 0 1rem;
     color: #e0e0e0;
-    -webkit-text-stroke: 0.3px black;
+
 }
 
     .member p1 {
@@ -352,8 +352,7 @@ footer {
         color: white;
         font-size: 1.1rem;
         font-weight: bold;
-        -webkit-text-stroke-color: black;
-        -webkit-text-stroke-width: 1.1px;
+
         white-space: normal;
         text-align: center;
         word-wrap: break-word;
