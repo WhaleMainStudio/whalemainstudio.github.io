@@ -64,11 +64,12 @@ document.addEventListener('DOMContentLoaded', function () {
             'team-lead': 'Développeur Principal',
             'team-dev': 'Développeur',
             'omadaKeyDemand-label': 'Demander une clef beta pour Omada :',
-            'omadaKeyDemand-button': "S'inscrire sur la liste d'attente",
+            'omadaKeyDemand-button': "S'inscrire sur la liste d\'attente",
             'confirmation-message': 'Votre demande de clef est enregistrée.',
             'error-message': 'Il y a eu une erreur lors de l\'inscription.',
             'game-title': 'Omada',
-            'game-description': 'La synergie vous apportera la victoire.',
+            'game-description': `Traversée du Désert :<br>Vous devez survivre avec le reste de votre équipe après un accident.<br>Traversez le désert d'Omada pour trouver de l'aide parmi les chercheurs de fluide noir arrivant de tout l'univers.<br>Chaque combat fatiguera votre équipe mais vous permettra de trouver de nouvelles recrues.<br><br>Versus multijoueur :<br>Affrontez un ami ou un joueur inconnu dans le mode multijoueur d'Omada !<br>Choisissez vos pièces parmi toutes celles disponibles dans le jeu et écrasez votre adversaire.<br><br>La bêta fermée est disponible dès maintenant !<br>Demandez une clef Steam en remplissant le formulaire ci-dessous.`,
+
             'contact-title': 'Contact',
             'contact-name-label': 'Nom :',
             'contact-email-label': 'Email :',
@@ -93,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'confirmation-message': 'Your key request is registered.',
             'error-message': 'There was an error during registration.',
             'game-title': 'Omada',
-            'game-description': 'Synergy will bring you victory.',
+            'game-description': `Desert Crossing:<br>You must survive with the rest of your team after an accident.<br>Cross the Omada desert to find help from black fluid researchers arriving from all over the universe.<br>Every fight will tire your team but help you recruit new members.<br><br>Multiplayer Versus:<br>Face a friend or a stranger in Omada’s multiplayer mode!<br>Choose your pieces from all those available in the game and crush your opponent.<br><br>The closed beta is now available!<br>Request a Steam key by filling out the form below.`,
             'contact-title': 'Contact',
             'contact-name-label': 'Name:',
             'contact-email-label': 'Email:',
@@ -118,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'confirmation-message': '¡Tu solicitud de clave está registrada!',
             'error-message': 'Hubo un error durante el registro.',
             'game-title': 'Omada',
-            'game-description': 'La sinergia te llevará a la victoria.',
+            'game-description': `Cruce del Desierto:<br>Debes sobrevivir con el resto de tu equipo después de un accidente.<br>Cruza el desierto de Omada para encontrar ayuda entre los investigadores de fluido negro que llegan de todo el universo.<br>Cada combate fatigará a tu equipo pero te permitirá reclutar nuevos miembros.<br><br>Versus multijugador:<br>¡Enfréntate a un amigo o a un extraño en el modo multijugador de Omada!<br>Elige tus piezas entre todas las disponibles en el juego y destruye a tu oponente.<br><br>¡La beta cerrada ya está disponible!<br>Solicita una clave de Steam llenando el formulario a continuación.`,
             'contact-title': 'Contacto',
             'contact-name-label': 'Nombre:',
             'contact-email-label': 'Correo electrónico:',
@@ -143,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'confirmation-message': '베타 키 요청이 등록되었습니다.',
             'error-message': '등록 중 오류가 발생했습니다.',
             'game-title': '오마다',
-            'game-description': '시너지가 승리를 가져다 줄 것입니다.',
+            'game-description': `사막 횡단:<br>사고 후 나머지 팀원들과 함께 살아남아야 합니다.<br>오마다 사막을 횡단하여 우주 전역에서 오는 검은 액체 연구원들로부터 도움을 찾아야 합니다.<br>각 전투는 팀을 피로하게 하지만, 새로운 팀원을 모집할 수 있게 해줍니다.<br><br>대전 모드:<br>오마다의 멀티플레이어 모드에서 친구나 낯선 사람과 싸워보세요!<br>게임에서 제공되는 모든 피스를 선택하고 상대를 제압하세요.<br><br>현재 비공개 베타가 제공되고 있습니다!<br>아래 양식을 작성하여 Steam 키를 요청하세요.`,
             'contact-title': '연락처',
             'contact-name-label': '이름:',
             'contact-email-label': '이메일:',
@@ -168,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'confirmation-message': 'ベータキーのリクエストが登録されました。',
             'error-message': '登録中にエラーが発生しました。',
             'game-title': 'Omada',
-            'game-description': 'シナジーが勝利をもたらします。',
+            'game-description': `砂漠横断:<br>事故後、残りのチームとともに生き残らなければなりません。<br>Omada砂漠を横断して、宇宙中から来る黒液体の研究者たちに助けを求めましょう。<br>各戦闘はチームを疲れさせますが、新しいメンバーを迎えることができます。<br><br>対戦モード:<br>Omadaのマルチプレイヤーモードで友達や見知らぬ人と戦ってみてください！<br>ゲームにあるすべてのピースから選んで、相手を粉砕しましょう。<br><br>現在、クローズドベータが提供中です！<br>以下のフォームを記入してSteamキーをリクエストしてください。`,
             'contact-title': '連絡先',
             'contact-name-label': '名前:',
             'contact-email-label': 'メール:',
@@ -193,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'confirmation-message': '您的密钥请求已注册。',
             'error-message': '注册过程中出现错误。',
             'game-title': 'Omada',
-            'game-description': '协同作战将带来胜利。',
+            'game-description': `沙漠穿越：<br>你必须和你的队友一起在事故后生存下来。<br>穿越Omada沙漠，寻找来自宇宙各地的黑液研究人员的帮助。<br>每场战斗都会让你的团队疲惫，但你能招募到新成员。<br><br>对战模式：<br>在Omada的多人对战模式中与朋友或陌生人对抗！<br>从游戏中所有可用的棋子中选择并击败对手。<br><br>目前提供封闭测试版！<br>填写以下表格请求Steam密钥。`,
             'contact-title': '联系方式',
             'contact-name-label': '姓名:',
             'contact-email-label': '电子邮件:',
@@ -218,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
             'confirmation-message': 'Ваш запрос на ключ зарегистрирован.',
             'error-message': 'Произошла ошибка при регистрации.',
             'game-title': 'Omada',
-            'game-description': 'Синергия приведет вас к победе.',
+            'game-description': `Пересечение пустыни:<br>Вы должны выжить с остальной частью вашей команды после аварии.<br>Пересеките пустыню Омаду, чтобы найти помощь среди исследователей черной жидкости, прибывших со всего вселенной.<br>Каждое сражение будет утомлять вашу команду, но оно позволит вам находить новых рекрутов.<br><br>Режим противостояния:<br>Сразитесь с другом или незнакомцем в многопользовательском режиме Omada!<br>Выбирайте свои фигуры из всех доступных в игре и раздавите противника.<br><br>Закрытая бета уже доступна!<br>Запросите Steam-ключ, заполнив форму ниже.`,
             'contact-title': 'Контакт',
             'contact-name-label': 'Имя:',
             'contact-email-label': 'Электронная почта:',
@@ -259,10 +260,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (section === 'team-member-name') {
                     element.textContent = translation[section][Array.from(element.parentNode.children).indexOf(element)];
                 } else {
-                    element.textContent = translation[section];
+                    if (section === 'game-description') {
+                        element.innerHTML = translation[section];
+                    } else {
+                        element.textContent = translation[section];
+                    }
                 }
             }
         });
+
         document.getElementById('omadaKeyDemand-email').placeholder = translation['omadaKeyDemand-email-placeholder'];
         document.getElementById('name-message').placeholder = translation['omadaKeyDemand-name-placeholder'];
         document.getElementById('name').placeholder = translation['contact-name-placeholder'];
