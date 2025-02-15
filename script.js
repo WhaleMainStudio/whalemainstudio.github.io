@@ -82,7 +82,8 @@ document.addEventListener('DOMContentLoaded', function () {
             'omadaKeyDemand-label': 'Demander une clef beta pour Omada :',
             'omadaKeyDemand-button': "S'inscrire sur la liste d\'attente",
             'confirmation-message': 'Votre demande de clef est enregistrée.',
-            'error-message': 'Il y a eu une erreur lors de l\'inscription.',
+            'error-message': 'Il y a eu une erreur lors de l\'envoi.',
+            'contact-confirmation-message': 'Votre demande de clef est enregistrée.',
             'game-title': 'Omada',
             'game-description': `Traversée du Désert :<br>Vous devez survivre avec le reste de votre équipe après un accident.<br>Traversez le désert d'Omada pour trouver de l'aide parmi les chercheurs de fluide noir arrivant de tout l'univers.<br>Chaque combat fatiguera votre équipe mais vous permettra de trouver de nouvelles recrues.<br><br>Versus multijoueur :<br>Affrontez un ami ou un joueur inconnu dans le mode multijoueur d'Omada !<br>Choisissez vos pièces parmi toutes celles disponibles dans le jeu et écrasez votre adversaire.<br><br>La bêta fermée est disponible dès maintenant !<br>Demandez une clef Steam en remplissant le formulaire ci-dessous.`,
 

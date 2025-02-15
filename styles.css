@@ -464,6 +464,7 @@ footer {
 
     #contact form input,
     #contact form textarea,
+    #omadaKeyDemand form textarea,
     #omadaKeyDemand-form input {
         width: 100%;
         max-width: 100%;
@@ -514,7 +515,8 @@ footer {
         max-width: 100%;
         margin: 0 auto;
     }
-    #contact form {
+    #contact form,
+    #omadaKeyDemand form {
         width: 100%;
         box-sizing: border-box;
     }
@@ -561,7 +563,7 @@ footer {
         max-width: 100%;
         margin: 0 auto;
     }
-
+    #omadaKeyDemand form,
     #contact form {
         width: 100%;
         box-sizing: border-box;
