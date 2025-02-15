@@ -24,7 +24,7 @@
                         <option value="zh">中文</option>
                         <option value="ru">Русский</option>
                     </select>
-                    <img id="flag-image" src="Flag" alt="Flag" class="flag">
+                    <img id="flag-image" src="Images/Flags/frenchFlag.png" alt="Flag" class="flag">
                 </div>
             </div>
             <h1 data-section="welcome-title">WhaleMain Studio</h1>
@@ -80,7 +80,7 @@
     <section id="contact">
         <div class="container">
             <h2 data-section="contact-title">Contact</h2>
-            <form id="contact-form" action="https://script.google.com/macros/s/AKfycbwF85jR1AemAB8bhhKVP4hlH559VojxUck_Fsqsy8olvLGc1bbAoVeN4IjaJtXdlYlmIw/exec" method="POST">
+            <form id="contact-form" action="https://script.google.com/macros/s/AKfycbwMboxnODpGcPXWvYfotMrs81WODB3KvtGXUU10L_CfSPxGTleYDKaPk6gsv62WWmsj/exec" method="POST">
                 <label for="name" data-section="contact-name-label">Nom :</label>
                 <input type="text" id="name" name="name" required>
 
@@ -92,6 +92,8 @@
 
                 <button type="submit" data-section="contact-button">Envoyer</button>
             </form>
+            <div id="contact-confirmation-message" style="display: none;" data-section="confirmation-message">Votre message a été envoyé.</div>
+            <div id="contact-error-message" style="display: none;" data-section="error-message">Il y a eu une erreur lors de l'envoi du message.</div>
         </div>
     </section>
 

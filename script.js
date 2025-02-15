@@ -3,19 +3,35 @@ document.addEventListener('DOMContentLoaded', function () {
     const omadaKeyDemandForm = document.getElementById('omadaKeyDemand-form');
     const confirmationMessage = document.getElementById('confirmation-message');
     const errorMessage = document.getElementById('error-message');
+    const contactConfirmationMessage = document.getElementById('contact-confirmation-message');
+    const contactErrorMessage = document.getElementById('contact-error-message');
 
     contactForm.addEventListener('submit', function (event) {
         event.preventDefault();
-        const test = new FormData(contactForm);
+        const formData = new FormData(contactForm);
+
         fetch(contactForm.action, {
             method: contactForm.method,
-            body: test,
+            body: formData,
             headers: {
                 'Accept': 'application/json'
             }
         })
-
-        alert('Formulaire de contact soumis avec succès !');
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    contactConfirmationMessage.style.display = 'block';
+                    contactErrorMessage.style.display = 'none';
+                    contactForm.reset();
+                } else {
+                    contactErrorMessage.style.display = 'block';
+                    contactConfirmationMessage.style.display = 'none';
+                }
+            })
+            .catch(error => {
+                contactErrorMessage.style.display = 'block';
+                contactConfirmationMessage.style.display = 'none';
+            });
     });
 
     omadaKeyDemandForm.addEventListener('submit', function (event) {
