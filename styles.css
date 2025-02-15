@@ -495,7 +495,15 @@ footer {
         width: 100%;
     }
 
+    .member {
+        width: 50px;
+        height: 50px;
+        padding: 0.5rem;
+    }
 
+        .member p1 {
+            font-size: 0.9rem;
+        }
     .Omada-logo {
         width: 150px;
         height: 150px;
@@ -539,8 +547,8 @@ footer {
     }
 
     .member {
-        width: 150px;
-        height: 150px;
+        width: 50px;
+        height: 50px;
         padding: 0.5rem;
     }
 
