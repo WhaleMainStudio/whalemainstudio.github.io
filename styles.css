@@ -465,14 +465,14 @@ footer {
     #contact form input,
     #contact form textarea,
     #omadaKeyDemand form textarea,
-    #omadaKeyDemand-form input {
+    #omadaKeyDemand form input {
         width: 100%;
         max-width: 100%;
         margin: 0 auto;
     }
 
     #contact form,
-    #omadaKeyDemand-form {
+    #omadaKeyDemand form {
         width: 100%;
         padding: 0 1rem;
     }
@@ -501,8 +501,8 @@ footer {
 
 
     .member {
-        width: 50px;
-        height: 50px;
+        width: 150px;
+        height: 150px;
         padding: 0.5rem;
     }
 
@@ -553,8 +553,8 @@ footer {
     }
 
     .member {
-        width: 50px;
-        height: 50px;
+        width: 150px;
+        height: 150px;
         padding: 0.5rem;
     }
 
