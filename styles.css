@@ -504,6 +504,10 @@ footer {
         width: 150px;
         height: 150px;
         padding: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
     }
 
         .member p1 {
@@ -511,8 +515,8 @@ footer {
             padding: 0 1rem;
         }
     .Omada-logo {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         object-fit: contain;
         display: block;
         margin: 0 auto 0.5rem;
@@ -553,9 +557,13 @@ footer {
     }
 
     .member {
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         padding: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
     }
 
     #jeu p {
