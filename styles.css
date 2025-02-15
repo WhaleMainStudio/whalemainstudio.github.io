@@ -495,6 +495,11 @@ footer {
         width: 100%;
     }
 
+    #jeu p {
+        font-size: 0.5rem;
+    }
+
+
     .member {
         width: 50px;
         height: 50px;
@@ -503,6 +508,7 @@ footer {
 
         .member p1 {
             font-size: 0.9rem;
+            padding: 0 1rem;
         }
     .Omada-logo {
         width: 150px;
@@ -553,7 +559,7 @@ footer {
     }
 
     #jeu p {
-        font-size: 1rem;
+        font-size: 0.5rem;
         padding: 0 1rem;
     }
 
