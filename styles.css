@@ -460,7 +460,7 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
 
     #contact form input,
     #contact form textarea,
@@ -496,7 +496,7 @@ footer {
     }
 
     #jeu p {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 
 
@@ -591,3 +591,4 @@ footer {
         box-sizing: border-box;
     }
 }
+*/
