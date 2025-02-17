@@ -660,6 +660,7 @@ footer {
 
     .member p1 {
         padding-top: 5px;
+        margin: 1rem;
     }
 }
 
@@ -688,5 +689,6 @@ footer {
         }
         .member p1 {
             padding-top: 5px;
+            margin: 1rem;
         }
 }
