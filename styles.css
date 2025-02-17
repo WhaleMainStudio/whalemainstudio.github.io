@@ -654,6 +654,7 @@ footer {
     }
 
     .member p {
+        padding-top: 5px;
         text-align: left;
         width: auto;
     }
@@ -680,6 +681,7 @@ footer {
     }
 
         .member p {
+            padding-top: 5px;
             text-align: center;
         }
 }
