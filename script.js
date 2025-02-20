@@ -5,35 +5,37 @@ document.addEventListener('DOMContentLoaded', function () {
     const errorMessage = document.getElementById('error-message');
     const contactConfirmationMessage = document.getElementById('contact-confirmation-message');
     const contactErrorMessage = document.getElementById('contact-error-message');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const formData = new FormData(contactForm);
 
-    contactForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        const formData = new FormData(contactForm);
-
-        fetch(contactForm.action, {
-            method: contactForm.method,
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.result === 'success') {
-                    contactConfirmationMessage.style.display = 'block';
-                    contactErrorMessage.style.display = 'none';
-                    contactForm.reset();
-                } else {
-                    contactErrorMessage.style.display = 'block';
-                    contactConfirmationMessage.style.display = 'none';
+            fetch(contactForm.action, {
+                method: contactForm.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
                 }
             })
-            .catch(error => {
-                contactErrorMessage.style.display = 'block';
-                contactConfirmationMessage.style.display = 'none';
-            });
-    });
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result === 'success') {
+                        contactConfirmationMessage.style.display = 'block';
+                        contactErrorMessage.style.display = 'none';
+                        contactForm.reset();
+                    } else {
+                        contactErrorMessage.style.display = 'block';
+                        contactConfirmationMessage.style.display = 'none';
+                    }
+                })
+                .catch(error => {
+                    contactErrorMessage.style.display = 'block';
+                    contactConfirmationMessage.style.display = 'none';
+                });
+        });
+    }
 
+    if (omadaKeyDemandForm) { 
     omadaKeyDemandForm.addEventListener('submit', function (event) {
         event.preventDefault();
         const formData = new FormData(omadaKeyDemandForm);
@@ -61,16 +63,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 confirmationMessage.style.display = 'none';
             });
     });
+    }
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
+    if (document) {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
+    }
 
     const languageSelect = document.getElementById('language-select');
     const flagImage = document.getElementById('flag-image');
@@ -99,7 +104,13 @@ document.addEventListener('DOMContentLoaded', function () {
             'contact-name-placeholder': 'Entrez votre nom',
             'contact-email-placeholder': 'Entrez votre email',
             'contact-message-placeholder': 'Entrez votre message',
-            'flag': 'Images/Flags/frenchFlag.png'
+            'flag': 'Images/Flags/frenchFlag.png',
+            'legal-title': 'Mentions Légales',
+            'legal-editor': 'Éditeur :',
+            'legal-director': 'Directeur de la publication :',
+            'legal-hosting': 'Hébergement :',
+            'legal-link': 'Mentions légales',
+            'home-link': 'Accueil'
         },
         'en': {
             'welcome-title': 'WhaleMain Studio',
@@ -125,7 +136,13 @@ document.addEventListener('DOMContentLoaded', function () {
             'contact-name-placeholder': 'Enter your name',
             'contact-email-placeholder': 'Enter your email',
             'contact-message-placeholder': 'Enter your message',
-            'flag': 'Images/Flags/englandFlag.png'
+            'flag': 'Images/Flags/englandFlag.png',
+            'legal-title': 'Legal Notices',
+            'legal-editor': 'Publisher:',
+            'legal-director': 'Publication Director:',
+            'legal-hosting': 'Hosting:',
+            'legal-link': 'Legal Notices',
+            'home-link': 'Home'
         },
         'es': {
             'welcome-title': 'WhaleMain Studio',
@@ -151,7 +168,13 @@ document.addEventListener('DOMContentLoaded', function () {
             'contact-name-placeholder': 'Introduce tu nombre',
             'contact-email-placeholder': 'Introduce tu correo electrónico',
             'contact-message-placeholder': 'Introduce tu mensaje',
-            'flag': 'Images/Flags/spainFlag.png'
+            'flag': 'Images/Flags/spainFlag.png',
+            'legal-title': 'Avisos Legales',
+            'legal-editor': 'Editor:',
+            'legal-director': 'Director de Publicación:',
+            'legal-hosting': 'Alojamiento:',
+            'legal-link': 'Avisos Legales',
+            'home-link': 'Inicio'
         },
         'ko': {
             'welcome-title': 'WhaleMain Studio',
@@ -177,7 +200,13 @@ document.addEventListener('DOMContentLoaded', function () {
             'contact-name-placeholder': '이름을 입력하세요',
             'contact-email-placeholder': '이메일을 입력하세요',
             'contact-message-placeholder': '메시지를 입력하세요',
-            'flag': 'Images/Flags/southKoreaFlag.png'
+            'flag': 'Images/Flags/southKoreaFlag.png',
+            'legal-title': '법적 고지',
+            'legal-editor': '편집자:',
+            'legal-director': '발행인:',
+            'legal-hosting': '호스팅:',
+            'legal-link': '법적 고지',
+            'home-link': '홈'
         },
         'ja': {
             'welcome-title': 'WhaleMain Studio',
@@ -203,7 +232,13 @@ document.addEventListener('DOMContentLoaded', function () {
             'contact-name-placeholder': '名前を入力してください',
             'contact-email-placeholder': 'メールアドレスを入力してください',
             'contact-message-placeholder': 'メッセージを入力してください',
-            'flag': 'Images/Flags/japanFlag.png'
+            'flag': 'Images/Flags/japanFlag.png',
+            'legal-title': '法的通知',
+            'legal-editor': '編集者:',
+            'legal-director': '発行責任者:',
+            'legal-hosting': 'ホスティング:',
+            'legal-link': '法的通知',
+            'home-link': 'ホーム'
         },
         'zh': {
             'welcome-title': 'WhaleMain Studio',
@@ -229,7 +264,13 @@ document.addEventListener('DOMContentLoaded', function () {
             'contact-name-placeholder': '输入您的姓名',
             'contact-email-placeholder': '输入您的电子邮件',
             'contact-message-placeholder': '输入您的消息',
-            'flag': 'Images/Flags/chinaFlag.png'
+            'flag': 'Images/Flags/chinaFlag.png',
+            'legal-title': '法律通知',
+            'legal-editor': '编辑者:',
+            'legal-director': '发行人:',
+            'legal-hosting': '托管:',
+            'legal-link': '法律通知',
+            'home-link': '主页'
         },
         'ru': {
             'welcome-title': 'WhaleMain Studio',
@@ -255,7 +296,13 @@ document.addEventListener('DOMContentLoaded', function () {
             'contact-name-placeholder': 'Введите ваше имя',
             'contact-email-placeholder': 'Введите ваш адрес электронной почты',
             'contact-message-placeholder': 'Введите ваше сообщение',
-            'flag': 'Images/Flags/russiaFlag.png'
+            'flag': 'Images/Flags/russiaFlag.png',
+            'legal-title': 'Правовые уведомления',
+            'legal-editor': 'Редактор:',
+            'legal-director': 'Директор публикации:',
+            'legal-hosting': 'Хостинг:',
+            'legal-link': 'Правовые уведомления',
+            'home-link': 'Главная'
         }
     };
 
@@ -271,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function () {
         'ru': 'ru'
     };
 
-    const defaultLang = languageMap[userLang.split('-')[0]] || 'fr';
+    const defaultLang = localStorage.getItem('selectedLanguage') || languageMap[userLang.split('-')[0]] || 'fr';
     languageSelect.value = defaultLang;
     flagImage.src = translations[defaultLang]['flag'];
 
@@ -292,17 +339,38 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        document.getElementById('omadaKeyDemand-email').placeholder = translation['omadaKeyDemand-email-placeholder'];
-        document.getElementById('name-message').placeholder = translation['omadaKeyDemand-name-placeholder'];
-        document.getElementById('name').placeholder = translation['contact-name-placeholder'];
-        document.getElementById('email').placeholder = translation['contact-email-placeholder'];
-        document.getElementById('message').placeholder = translation['contact-message-placeholder'];
+        const emailInput = document.getElementById('omadaKeyDemand-email');
+        if (emailInput) {
+            emailInput.placeholder = translation['omadaKeyDemand-email-placeholder'];
+        }
 
+        const nameMessageInput = document.getElementById('name-message');
+        if (nameMessageInput) {
+            nameMessageInput.placeholder = translation['omadaKeyDemand-name-placeholder'];
+        }
+
+        const nameInput = document.getElementById('name');
+        if (nameInput) {
+            nameInput.placeholder = translation['contact-name-placeholder'];
+        }
+
+        const emailContactInput = document.getElementById('email');
+        if (emailContactInput) {
+            emailContactInput.placeholder = translation['contact-email-placeholder'];
+        }
+
+        const messageInput = document.getElementById('message');
+        if (messageInput) {
+            messageInput.placeholder = translation['contact-message-placeholder'];
+        }
+       
         flagImage.src = translation['flag'];
+
     }
 
     languageSelect.addEventListener('change', function () {
         const selectedLang = languageSelect.value;
+        localStorage.setItem('selectedLanguage', selectedLang);
         translatePage(selectedLang);
     });
 
